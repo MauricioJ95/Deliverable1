@@ -30,22 +30,28 @@ namespace Deliverable1
             values.Add(num1);
             values.Add(num2);
             values.Add(num3);
+            values.Sum();
 
-            Console.WriteLine((num1 + num2 + num3));
-            input = Console.ReadLine();
-            total = float.Parse(input);
+            Console.WriteLine("This is the sum of the values: " + values.Sum());
 
             var usCulture = CultureInfo.GetCultureInfo("en-US");
-            var outputUS = string.Format("c", usCulture);
+            var outputUS = string.Format("0:c", values.Sum(), usCulture);
+            Console.WriteLine(outputUS);
 
-            var svCulture = CultureInfo.GetCultureInfo("sv-Sweden");
-            var outputSV = string.Format("c", svCulture);
 
-            var jaCulture = CultureInfo.GetCultureInfo("ja-Japan");
-            var outputJA = string.Format("c", jaCulture);
+            var svCulture = CultureInfo.GetCultureInfo("sv");
+            var outputSV = string.Format("0:c", svCulture);
+            
 
-            var thCulture = CultureInfo.GetCultureInfo("th-Thai");
-            var outputTH = string.Format("c", thCulture);
+            var jaCulture = CultureInfo.GetCultureInfo("ja");
+            var outputJA = string.Format("0:c", values.Sum(), jaCulture);
+            Console.WriteLine(outputJA);
+
+            var thCulture = CultureInfo.GetCultureInfo("th");
+            var outputTH = string.Format("0:c", thCulture);
+            Console.WriteLine(outputTH);
+
+
 
             Console.WriteLine("Highest number is {0}", values.Max());
             Console.WriteLine("Lowest number is {0}", values.Min());
