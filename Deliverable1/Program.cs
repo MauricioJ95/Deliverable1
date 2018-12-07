@@ -35,35 +35,25 @@ namespace Deliverable1
             Console.WriteLine("This is the sum of the values: " + values.Sum());
 
             var usCulture = CultureInfo.GetCultureInfo("en-US");
-            var outputUS = string.Format("0:c", values.Sum(), usCulture);
+            var outputUS = values.Sum().ToString("c", usCulture);
             Console.WriteLine(outputUS);
 
-
             var svCulture = CultureInfo.GetCultureInfo("sv");
-            var outputSV = string.Format("0:c", svCulture);
-            
+            var outputSV = values.Sum().ToString("c", svCulture);
+            Console.WriteLine(outputSV);
 
             var jaCulture = CultureInfo.GetCultureInfo("ja");
-            var outputJA = string.Format("0:c", values.Sum(), jaCulture);
+            var outputJA = values.Sum().ToString("c", jaCulture);
             Console.WriteLine(outputJA);
 
-            var thCulture = CultureInfo.GetCultureInfo("th");
-            var outputTH = string.Format("0:c", thCulture);
+            var thCulture = CultureInfo.GetCultureInfo("th-TH");
+            var outputTH = values.Sum().ToString("c", thCulture);
             Console.WriteLine(outputTH);
-
-
-
             Console.WriteLine("Highest number is {0}", values.Max());
             Console.WriteLine("Lowest number is {0}", values.Min());
             Console.WriteLine("Average is {0}", values.Average());
 
-
-            /*var usCulture = CultureInfo.GetCultureInfo("EN-US");
-
-            var output = string.Format("c", usCulture);*/
-
             Console.ReadLine();
-
         }
         
     }
