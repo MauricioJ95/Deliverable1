@@ -48,6 +48,7 @@ namespace Deliverable1
 
             var thCulture = CultureInfo.GetCultureInfo("th-TH");
             var outputTH = values.Sum().ToString("c", thCulture);
+
             Console.WriteLine(outputTH);
             Console.WriteLine("Highest number is {0}", values.Max());
             Console.WriteLine("Lowest number is {0}", values.Min());
